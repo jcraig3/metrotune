@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <h1>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>TunerTeacher</title>
+    <button id="back"><a href="home.html">HOME</a></button>
+    <img src="../images/logo.png" id="logo" />
+  </h1>
+  <body>
+    <div id="tuner">
+      <p><span id="note" class="outTune"></span></p>
+      <div id="tuneInfo">
+        <p>Cents: <span id="change"></span></p>
+        <p>Hz: <span id="hz"></span></p>
+      </div>
+    </div>
+    <button id="btn" onclick="start();">START TUNER</button>
+    <p></p>
+    <br />
+    <br />
+
+    <!--
+    <div id="reference">
+      <input
+        type="range"
+        min="82"
+        max="330"
+        value="50"
+        class="slider"
+        id="slide"
+        onmousedown="slideDown();"
+        onmouseup="slideUp();"
+      />
+    </div>
+    -->
+    <!-- reference notes-->
+    <div id="refNotes">
+      <button
+        id="e"
+        class="natural"
+        onmousedown="refNoteDown(82.41);"
+        onmouseup="refNoteUp();"
+      >
+        E
+      </button>
+      <button
+        id="f"
+        class="natural"
+        onmousedown="refNoteDown(87.31);"
+        onmouseup="refNoteUp();"
+      >
+        F
+      </button>
+      <button
+        id="fsharp"
+        class="sharp"
+        onmousedown="refNoteDown(92.50);"
+        onmouseup="refNoteUp();"
+      >
+        F#
+      </button>
+      <button
+        id="g"
+        class="natural"
+        onmousedown="refNoteDown(98.00);"
+        onmouseup="refNoteUp();"
+      >
+        G
+      </button>
+      <button
+        id="gsharp"
+        class="sharp"
+        onmousedown="refNoteDown(103.83);"
+        onmouseup="refNoteUp();"
+      >
+        G#
+      </button>
+      <button
+        id="a"
+        class="natural"
+        onmousedown="refNoteDown(110.00);"
+        onmouseup="refNoteUp();"
+      >
+        A
+      </button>
+      <button
+        id="asharp"
+        class="sharp"
+        onmousedown="refNoteDown(116.54);"
+        onmouseup="refNoteUp();"
+      >
+        A#
+      </button>
+      <button
+        id="b"
+        class="natural"
+        onmousedown="refNoteDown(123.47);"
+        onmouseup="refNoteUp();"
+      >
+        B
+      </button>
+      <button
+        id="c"
+        class="natural"
+        onmousedown="refNoteDown(130.81);"
+        onmouseup="refNoteUp();"
+      >
+        C
+      </button>
+      <button
+        id="csharp"
+        class="sharp"
+        onmousedown="refNoteDown(138.59);"
+        onmouseup="refNoteUp();"
+      >
+        C#
+      </button>
+      <button
+        id="d"
+        class="natural"
+        onmousedown="refNoteDown(146.83);"
+        onmouseup="refNoteUp();"
+      >
+        D
+      </button>
+      <button
+        id="dsharp"
+        class="sharp"
+        onmousedown="refNoteDown(155.56);"
+        onmouseup="refNoteUp();"
+      >
+        D#
+      </button>
+      <button
+        id="eoct"
+        class="natural"
+        onmousedown="refNoteDown(164.81);"
+        onmouseup="refNoteUp();"
+      >
+        e
+      </button>
+    </div>
+    <p>Reference Hz: <span id="refhz"></span></p>
+    <!---->
+    <script type="text/javascript" src="./code.js"></script>
+  </body>
+</html>
