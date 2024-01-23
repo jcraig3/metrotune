@@ -1,0 +1,38 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Jayden Craig
+MetroTune project
+==============================
+
+Proposal Document:
+------------------
+   The proposal document is a good start, but lacks some of the required
+   information.  The project description is pretty good, but could use a bit
+   more on how it will work for the user ~ will it use the computer's own
+   microphone?  Will the instrument plug in to the computer?  How will the
+   tuning be indicated ~ by a graph, or by beats, or by red/yellow/green
+   icons on the screen?  Etc.
+
+   Missing entirely is the justification section.  Uh-oh....
+
+   Your poster is nice, with the colors, different for each block.  Very
+   eye-catching!  The logo is cool, too.  You do need an LMU seal on there,
+   along with the presentation date.  I also note that your project this
+   time is "MetroTune" but the poster is about "TunerTeacher"...  hmmm.
+
+Proposal Presentation:
+----------------------
+   Excellent job on the presentation.  I think you have a good project.  I
+   think you might try to consider another element to add as a stretch goal,
+   since you already have the tuner portion working and adding the metronome
+   seems like you can do that relatively easily.  ....just sayin'....
+
+   All in all, though, nice work.  Your presentation skills could benefit if
+   you look more at the audience when presenting ~ you were looking mostly
+   at the slides on the screen.
+
+=============================================================================
+your score:  4.5% out of 5% which is an A-minus
+
