@@ -6,5 +6,29 @@
     <button id="back"><a href="home.html">HOME</a></button>
     <img src="../images/logo.png" id="logo" />
   </h1>
-  <p>COMING SOON</p>
+  <body>
+    <p></p>
+    <div id="metronome">
+      <p><span id="bpm">BPM</span></p>
+      <div id="bpmInput">
+        <p>
+          <input type="number" id="input" min="1" max="1015" />
+          <button id="submit" onclick="enter()">ENTER</button>
+        </p>
+      </div>
+      <div id="controls">
+        <button id="minus" onclick="sub()" class="adjuster">-</button>
+        <button id="click" onclick="start()" class="stopped">PLAY</button>
+        <button id="plus" onclick="add()" class="adjuster">+</button>
+      </div>
+      <div id="barBeats">
+        <p></p>
+        <button id="beatDown" onclick="subBeat()" class="adjuster">-</button>
+        <span id="beatPB">Beats</span>
+        <button id="beatUp" onclick="addBeat()" class="adjuster">+</button>
+        <p><span id="beatTracker"></span></p>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./metro.js"></script>
 </html>
