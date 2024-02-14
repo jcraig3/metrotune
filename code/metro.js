@@ -7,6 +7,7 @@ var bpm, minus, plus, click, input, submit, beatPB, beatTracker;
 var playing = false;
 var tempo = 120;
 var beats = 4;
+var audioContext = null;
 
 window.onload = function () {
   //assign vars to html elements
@@ -29,7 +30,9 @@ window.onload = function () {
 
 function start() {
   if (playing == false) {
-    audioContext = new window.AudioContext();
+    if (audioContext == null) {
+      audioContext = new window.AudioContext();
+    }
     playing = true;
     click.className = "clicking";
     click.textContent = "STOP";
