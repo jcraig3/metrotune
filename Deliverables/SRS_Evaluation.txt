@@ -1,0 +1,34 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Jayden Craig
+MetroTune project
+==============================
+
+Software Requirements Specification Document:
+---------------------------------------------
+-- Introduction Section
+   Excellent work on this section!  Nothing to add here.  The diagram is
+   great to show the parts and their associations.
+
+-- Functional Requirements
+   The only observation here is that all the "must" words should be changed
+   to "shall".  The requirements language uses "shall" never "must".
+
+   Otherwise, perfect, nothing to add.
+
+-- Performance Requirements
+   Same comment as in functional sections.
+
+-- Environment Requirements
+   Same comment as in functional sections.
+
+
+=============================================================================
+your score:  9% out of 10% which is an A-minus
+
+All in all, an excellent job!
+
+Make the changes as suggested above, including many more requirements for
+the second submission and you'll get the full 10% on this document.
