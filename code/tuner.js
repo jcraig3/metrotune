@@ -109,31 +109,6 @@ function changeHz() {
   hz.textContent = frequency;
 }
 
-//print refHZ to refhz span
-function changeRefHz() {
-  refhz.textContent = reffrequency;
-}
-
-//for slide reference notes
-function slideDown() {
-  playRef();
-  changeRefHz();
-}
-
-//for slide reference notes
-function slideUp() {
-  oscillator.disconnect();
-}
-
-function refNoteDown(buttonFreq) {
-  playRef(buttonFreq);
-  changeRefHz();
-}
-
-function refNoteUp() {
-  oscillator.disconnect();
-}
-
 //equation to get note name with research from https://pages.mtu.edu/~suits/NoteFreqCalcs.html
 function getNote(frequency) {
   var noteValue = 12 * (Math.log(frequency / 440) / Math.log(2));
@@ -162,25 +137,6 @@ function getChangeNeeded(curFreq, note) {
 function updateChange(frequency, note) {
   changeNeeded = getChangeNeeded(frequency, note);
   change.textContent = changeNeeded;
-}
-
-//for slide reference notes
-function playSlideRef() {
-  oscillator = audioContext.createOscillator();
-  oscillator.type = "sine";
-  oscillator.frequency.value = slide.value; //frequency value in HZ
-  reffrequency = oscillator.frequency.value;
-  oscillator.connect(audioContext.destination);
-  oscillator.start(audioContext.currentTime);
-}
-
-function playRef(buttonFreq) {
-  oscillator = audioContext.createOscillator();
-  oscillator.type = "sine";
-  reffrequency = buttonFreq;
-  oscillator.frequency.value = buttonFreq; //frequency value in HZ
-  oscillator.connect(audioContext.destination);
-  oscillator.start(audioContext.currentTime);
 }
 
 //Pitch algorithm ACF2+ from pitch detection repo

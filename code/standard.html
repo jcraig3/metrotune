@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <h1>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>MetroTune</title>
+    <button id="back"><a href="home.html">HOME</a></button>
+    <button class="linkButton"><a href="reference.html">BACK</a></button>
+    <img src="../images/logo.png" id="logo" />
+  </h1>
+  <button id="btn" onclick="start();">START</button>
+  <p></p>
+  <div id="refNotes">
+    <button
+      id="e"
+      class="natural"
+      onmousedown="refNoteDown(82);"
+      onmouseup="refNoteUp();"
+    >
+      E
+    </button>
+    <button
+      id="f"
+      class="natural"
+      onmousedown="refNoteDown(110);"
+      onmouseup="refNoteUp();"
+    >
+      A
+    </button>
+    <button
+      id="fsharp"
+      class="sharp"
+      onmousedown="refNoteDown(147);"
+      onmouseup="refNoteUp();"
+    >
+      D
+    </button>
+    <button
+      id="g"
+      class="natural"
+      onmousedown="refNoteDown(196);"
+      onmouseup="refNoteUp();"
+    >
+      G
+    </button>
+    <button
+      id="gsharp"
+      class="sharp"
+      onmousedown="refNoteDown(247);"
+      onmouseup="refNoteUp();"
+    >
+      B
+    </button>
+    <button
+      id="eoct"
+      class="natural"
+      onmousedown="refNoteDown(330);"
+      onmouseup="refNoteUp();"
+    >
+      e
+    </button>
+  </div>
+  <p>Reference Hz: <span id="refhz"></span></p>
+  <p></p>
+  <!---->
+  <script type="text/javascript" src="./reference.js"></script>
+</html>

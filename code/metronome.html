@@ -12,13 +12,20 @@
       <p><span id="bpm">BPM</span></p>
       <div id="bpmInput">
         <p>
-          <input type="number" id="input" min="1" max="1015" />
-          <button id="submit" onclick="enter()">ENTER</button>
+          <input
+            type="range"
+            id="bpmSlider"
+            max="240"
+            min="2"
+            oninput="updateSlider()"
+          />
         </p>
       </div>
       <div id="controls">
         <button id="minus" onclick="sub()" class="adjuster">-</button>
-        <button id="click" onclick="start()" class="stopped">PLAY</button>
+        <button id="click" onclick="startMetronome()" class="stopped">
+          PLAY
+        </button>
         <button id="plus" onclick="add()" class="adjuster">+</button>
       </div>
       <div id="barBeats">
