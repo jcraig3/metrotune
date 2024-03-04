@@ -1,0 +1,32 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Jayden Craig
+MetroTune project
+=============================================
+
+Software Development Plan Document:
+---------------------------------------------
+-- General Comments
+   Very nice job on this document.
+
+-- Introduction Section
+   Great work on the explanations for each of the deliverables!  This is a
+   very helpful section as a result.
+
+-- Project Resources Section
+   This is minimal, of course.  Since there is so little information needed
+   you don't need to put each section on its own page.
+
+-- Project Organization Section
+   Perfect, no other comments, no adjustments needed here.
+
+-- Project Schedule Section
+   Also perfect, no other comments, no adjustments needed here.
+
+=============================================================================
+your score:  10% out of 10% which is an A-plus
+
+You are good to go.  Full credit for both the first and second submission,
+but don't forget to condense those nearly blank pages in the resources section.
