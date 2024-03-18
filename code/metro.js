@@ -1,7 +1,7 @@
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 //html elements
-var bpm, minus, plus, click, beatPB, beatTracker, bpmSlider;
+var bpm, minus, plus, click, beatPB, beatTracker, bpmSlider, accentButton;
 
 //audio context elements
 var audioContext;
@@ -18,6 +18,7 @@ var playing = false;
 var tempo = 120;
 var beats = 4;
 var currBeat = 1;
+var accented = true;
 
 window.onload = function () {
   //assign vars to html elements
@@ -28,6 +29,7 @@ window.onload = function () {
   beatPB = document.getElementById("beatPB");
   bpmSlider = document.getElementById("bpmSlider");
   beatTracker = document.getElementById("beatTracker");
+  accentButton = document.getElementById("accentButton");
 
   //set up page
   console.log("LOADED DAWG");
@@ -71,7 +73,11 @@ function play() {
 function playSound() {
   oscillator = audioContext.createOscillator();
   oscillator.type = "sine";
-  oscillator.frequency.value = 550;
+  if (accented && currBeat == 1) {
+    oscillator.frequency.value = 750;
+  } else {
+    oscillator.frequency.value = 550;
+  }
   oscillator.connect(audioContext.destination);
   oscillator.start(audioContext.currentTime);
   oscillator.stop(audioContext.currentTime + 0.03);
@@ -146,5 +152,17 @@ function stopPlay() {
   if (playing) {
     stop();
     play();
+  }
+}
+
+function accentClick() {
+  if (accented) {
+    accented = false;
+    accentButton.className = "noAccent";
+    accentButton.textContent = "OFF";
+  } else {
+    accented = true;
+    accentButton.className = "accent";
+    accentButton.textContent = "ON";
   }
 }

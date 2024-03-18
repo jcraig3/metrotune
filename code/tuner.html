@@ -3,9 +3,13 @@
   <h1>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>MetroTune</title>
-    <button id="back"><a href="home.html">HOME</a></button>
-    <img src="../images/logo.png" id="logo" />
+    <img src="../images/metrotuneLogo.png" id="logo" />
   </h1>
+  <div id="buttons">
+    <button class="linkButton"><a href="home.html">HOME</a></button>
+    <button class="linkButton"><a href="metronome.html">METRONOME</a></button>
+  </div>
+  <h2>TUNER</h2>
   <body>
     <div id="tuner">
       <p><span id="note" class="outTune"></span></p>
@@ -19,7 +23,9 @@
     <br />
     <br />
 
-    <button id="toRef"><a href="reference.html">Reference Notes</a></button>
+    <button class="linkButton">
+      <a href="reference.html">Reference Notes</a>
+    </button>
     <!--
     <div id="reference">
       <input

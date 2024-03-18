@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <h1>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>MetroTune</title>
+    <img src="../images/metrotuneLogo.png" id="logo" />
+  </h1>
+  <div id="buttons">
+    <button class="linkButton"><a href="home.html">HOME</a></button>
+    <button class="linkButton"><a href="earTraining.html">BACK</a></button>
+  </div>
+  <h2>NOTE RECOGNITION</h2>
+  <body>
+    <p id="intervalBody">
+      Click on the ? button to hear the note. Select one of the answer options
+      below and if it lights up green, you are correct! Then you can click next
+      to move on. Have fun!
+    </p>
+  </body>
+  <div id="interval">
+    <button
+      class="natural"
+      onmousedown="refNoteDown(guessPitch);"
+      onmouseup="refNoteUp();"
+    >
+      ?
+    </button>
+  </div>
+  <br />
+  <div id="answers">
+    <button>C</button>
+    <button>D</button>
+    <button>E</button>
+    <button>F</button>
+    <button>G</button>
+    <button>A</button>
+    <button>B</button>
+  </div>
+  <br />
+  <button onClick="checkNext()">NEXT</button>
+  <script type="text/javascript" src="./pitchTest.js"></script>
+</html>

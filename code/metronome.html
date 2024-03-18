@@ -3,9 +3,13 @@
   <h1>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>MetroTune</title>
-    <button id="back"><a href="home.html">HOME</a></button>
-    <img src="../images/logo.png" id="logo" />
+    <img src="../images/metrotuneLogo.png" id="logo" />
   </h1>
+  <div id="buttons">
+    <button class="linkButton"><a href="home.html">HOME</a></button>
+    <button class="linkButton"><a href="tuner.html">TUNER</a></button>
+  </div>
+  <h2>METRONOME</h2>
   <body>
     <p></p>
     <div id="metronome">
@@ -35,6 +39,11 @@
         <button id="beatUp" onclick="addBeat()" class="adjuster">+</button>
         <p><span id="beatTracker"></span></p>
       </div>
+      <p></p>
+      <span id="accentSelect">Accent First Beat: </span>
+      <button id="accentButton" onclick="accentClick()" class="accent">
+        ON
+      </button>
     </div>
   </body>
   <script type="text/javascript" src="./metro.js"></script>

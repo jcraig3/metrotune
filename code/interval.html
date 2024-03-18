@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <h1>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>MetroTune</title>
+    <img src="../images/metrotuneLogo.png" id="logo" />
+  </h1>
+  <div id="buttons">
+    <button class="linkButton"><a href="home.html">HOME</a></button>
+    <button class="linkButton"><a href="earTraining.html">BACK</a></button>
+  </div>
+  <h2>INTERVAL RECOGNITION</h2>
+  <body>
+    <p id="intervalBody">
+      Click on both note buttons to hear the interval. Select one of the answer
+      options below and if it lights up green, you are correct! Then you can
+      click next to move on. Have fun!
+    </p>
+  </body>
+  <div id="interval">
+    <button
+      class="natural"
+      onmousedown="refNoteDown(262);"
+      onmouseup="refNoteUp();"
+    >
+      C
+    </button>
+    <button
+      class="natural"
+      onmousedown="refNoteDown(testPitch);"
+      onmouseup="refNoteUp();"
+    >
+      ?
+    </button>
+  </div>
+  <br />
+  <div id="answers">
+    <button>1U</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8ve</button>
+  </div>
+  <br />
+  <button onClick="checkNext()">NEXT</button>
+  <script type="text/javascript" src="./pitchTest.js"></script>
+</html>
