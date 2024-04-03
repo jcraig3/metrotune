@@ -45,11 +45,13 @@ window.onload = function () {
   note = document.getElementById("note");
   info = document.getElementById("info");
   change = document.getElementById("change");
+  tuneDirect = document.getElementById("tuneDirect");
 
   //set up format of note info
   note.className = "pretune";
   note.textContent = "--";
   hz.textContent = "--";
+  tuneDirect.textContent = "--";
   change.textContent = "--";
 };
 
@@ -82,6 +84,7 @@ function refresh() {
   if (pitch == -1) {
     hz.textContent = "--";
     note.textContent = "--";
+    tuneDirect.textContent = "--";
     change.textContent = "--";
   } else {
     frequency = Math.round(pitch);
@@ -137,6 +140,13 @@ function getChangeNeeded(curFreq, note) {
 function updateChange(frequency, note) {
   changeNeeded = getChangeNeeded(frequency, note);
   change.textContent = changeNeeded;
+  if (changeNeeded > 0) {
+    tuneDirect.textContent = "DOWN";
+  } else if (changeNeeded < 0) {
+    tuneDirect.textContent = "UP";
+  } else if (changeNeeded == 0) {
+    tuneDirect.textContent = "in tune";
+  }
 }
 
 //Pitch algorithm ACF2+ from pitch detection repo
