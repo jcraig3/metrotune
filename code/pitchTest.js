@@ -26,6 +26,9 @@ var pitchArray = {
 var answered = false;
 
 window.onload = function () {
+  //interval variables
+  answerChecker = document.getElementById("answerChecker");
+
   getRandFreq();
   console.log(testPitch);
 };
@@ -81,11 +84,31 @@ function getRandomInt(min, max) {
 
 //if answered correctly, get a new freq
 // otherwise, light up red and don't progress
+//if button id == pitchInt then answered is tru and button lights green
+function intCheckClick(btnInt) {
+  if (btnInt == pitchInt) {
+    answered = true;
+    intCheckAnswer();
+    answerChecker.textContent = "Correct!";
+  } else {
+    answered = false;
+    intCheckAnswer();
+    answerChecker.textContent = "Try again";
+  }
+}
+
 function checkNext() {
   if (answered) {
+    answered = false;
+    answerChecker.textContent = "";
     getRandFreq();
   }
 }
 
-//check to see if interval is correct when btn is clicked
-function checkInt() {}
+function intCheckAnswer() {
+  if (answered) {
+    answerChecker.className = "true";
+  } else if (!answered) {
+    answerChecker.className = "false";
+  }
+}

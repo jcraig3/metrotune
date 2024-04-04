@@ -20,7 +20,7 @@
   <div id="interval">
     <button
       class="natural"
-      onmousedown="refNoteDown(guessPitch);"
+      onmousedown="refNoteDown(testPitch);"
       onmouseup="refNoteUp();"
     >
       ?
@@ -28,13 +28,13 @@
   </div>
   <br />
   <div id="answers">
-    <button>C</button>
-    <button>D</button>
-    <button>E</button>
-    <button>F</button>
-    <button>G</button>
-    <button>A</button>
-    <button>B</button>
+    <button onclick="checkClick(1)">C</button>
+    <button onclick="checkClick(2)">D</button>
+    <button onclick="checkClick(3)">E</button>
+    <button onclick="checkClick(4)">F</button>
+    <button onclick="checkClick(5)">G</button>
+    <button onclick="checkClick(6)">A</button>
+    <button onclick="checkClick(7)">B</button>
   </div>
   <br />
   <button onClick="checkNext()">NEXT</button>
