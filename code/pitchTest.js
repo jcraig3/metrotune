@@ -88,12 +88,36 @@ function getRandomInt(min, max) {
 function intCheckClick(btnInt) {
   if (btnInt == pitchInt) {
     answered = true;
-    intCheckAnswer();
+    checkAnswer();
     answerChecker.textContent = "Correct!";
   } else {
     answered = false;
-    intCheckAnswer();
+    checkAnswer();
     answerChecker.textContent = "Try again";
+  }
+}
+
+function noteCheckClick(btnInt) {
+  if (btnInt == pitchInt) {
+    answered = true;
+    checkAnswer();
+    answerChecker.textContent = "Correct!";
+  } else if (btnInt == 1 && pitchInt == 8) {
+    answered = true;
+    checkAnswer();
+    answerChecker.textContent = "Correct!";
+  } else {
+    answered = false;
+    checkAnswer();
+    answerChecker.textContent = "Try again";
+  }
+}
+
+function checkAnswer() {
+  if (answered) {
+    answerChecker.className = "true";
+  } else if (!answered) {
+    answerChecker.className = "false";
   }
 }
 
@@ -102,13 +126,5 @@ function checkNext() {
     answered = false;
     answerChecker.textContent = "";
     getRandFreq();
-  }
-}
-
-function intCheckAnswer() {
-  if (answered) {
-    answerChecker.className = "true";
-  } else if (!answered) {
-    answerChecker.className = "false";
   }
 }
